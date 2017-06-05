@@ -1,0 +1,174 @@
+/*  COLORES
+        Rojo: #b42a33;
+        Gris: #ccc;
+        Negro: #333;
+*/
+*{
+    margin:0;
+    padding:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {  
+  font-size:27px;
+  background-color:#e4e4e0;
+
+}
+
+/*  NAVEGADOR  */
+nav {
+    display: flex;
+    width: 100%;
+    background-color: #333;
+}
+.topnav {
+    display: flex;
+    list-style-type: none;
+}
+
+.topnav li {
+    display: flex;
+    flex-direction: column;
+}
+
+.topnav li a {
+    color: #f2f2f2;
+    padding: 30px 45px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 32px;
+}
+
+.topnav li a:hover {
+    background-color: #555;
+}
+
+ul.topnav li a:hover ~ .decor {
+    top: 0px;
+}
+
+.decor {
+    position:relative;
+    width: 100%;
+    height: 10px;
+    top: -364px;
+    background-color: #b42a33;
+}
+
+
+/*  BLOQUES  */
+
+#general,#energia,#transporte {
+    display: none;
+    justify-content: space-around;
+    padding: 2% 0;
+    background-color: #ccc;
+    box-shadow: 0 0 5px #555;
+    margin-bottom: 2%;
+}
+
+#g,#e,#t {
+    display:flex;
+    flex-direction: column;
+}
+
+.preguntas,.dependiente{
+    border-radius: 7px;
+    box-shadow: 0 0 25px #555;
+    width:40%;
+    margin: 3% auto;
+    padding-bottom:40px;
+    background-color: #f2f2f2;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+p{
+    font-size:30px;
+    text-align: center;
+    padding-top: 5%;
+    padding-bottom: 1%;
+    padding-left: 8%;
+    padding-right: 8%;
+    color: #b42a33;
+    
+}
+form {
+    padding-right: 6%;
+    padding-left: 8%;
+}
+.dependiente {
+    box-shadow: 0 0 25px #b42a33; 
+}
+
+label {
+    font-size: 22px;
+    margin-left: 2%;
+}
+
+hr {
+    width:85%;
+    margin:0 auto;
+    margin-bottom: 40px;
+    background-color: #b42a33;
+    height: 3px;
+}
+
+@media screen and (max-width:1430px){
+     body {font-size: 23px;}
+
+    .topnav li a {font-size: 28px;}
+
+    p{font-size: 26px;}
+
+    label{font-size: 18px;}
+
+    .preguntas,.dependiente{width:50%;}
+}
+
+@media screen and (max-width:902px){
+    body {font-size: 19px;}
+
+    .topnav {
+        width: 100%;
+        justify-content: space-between;
+        }
+
+    .topnav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .topnav li a {
+        font-size: 25px;
+        padding: 25px 40px;
+    }
+    
+    p{font-size: 22px;}
+
+    label{font-size: 15px;}
+
+    .preguntas,.dependiente{width:60%;}
+}
+
+@media screen and (max-width:663px){
+    body {font-size: 12px;}
+    .topnav li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .topnav li a {
+        font-size: 18px;
+        padding: 15px 15px;
+    }
+    
+    p{font-size: 18px;}
+
+    label{font-size: 13px;}
+
+    hr {margin-bottom: 20px;}
+
+    .preguntas,.dependiente{width:80%;}
+}

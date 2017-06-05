@@ -1,0 +1,162 @@
+[
+    {
+      "dependiente": "false",
+      "idpregunta": "1",
+      "categoria": "general",
+      "respuestamultiple": "false",
+      "textopregunta": "¿Qué edad tienes?",
+      "respuestas": [
+        {
+          "dependencia":"false",
+          "idrespuesta": "1",
+          "textorespuesta": "Menos de 16 años"
+        },
+        {
+          "dependencia":"false",
+          "idrespuesta": "2",
+          "textorespuesta": "Entre 17 y 36 años"
+        },
+        {
+          "dependencia":"false",
+          "idrespuesta": "3",
+          "textorespuesta": "Entre 37 y 56 años"
+        },
+        {
+          "dependencia":"false",
+          "idrespuesta": "4",
+          "textorespuesta": "Entre 57 y 76 años"
+        },
+        {
+          "dependencia":"false",
+          "idrespuesta": "5",
+          "textorespuesta": "Más de 76"
+        }
+
+      ]
+    },
+    {
+      "dependiente": "des",
+      "idpregunta": "2",
+      "categoria": "general",
+      "respuestamultiple": "false",
+      "textopregunta": "¿Cuántos elementos de calefacción tienes en casa? (cuenta todos los radiadores, estufas, etc.)?",
+      "respuestas": [
+        {
+          "dependencia":"false",
+          "idrespuesta": "6",
+          "textorespuesta": "No tengo ninguno"
+        },
+        {
+          "dependencia":"false",
+          "idrespuesta": "7",
+          "textorespuesta": "Tengo alguna estufa o calefactor móvil"
+        },
+        {
+          "dependencia":"true",
+          "idrespuesta": "8",
+          "textorespuesta": "Tengo un sistema de calefacción con radiadores fijos"
+        }
+      ]
+    },
+    {
+      "dependiente": "true",
+      "idpregunta": "3",
+      "categoria": "general",
+      "respuestamultiple": "false",
+      "textopregunta": "¿Tu sistema de calefacción es central o individual?",
+      "respuestas": [
+        {
+          "dependencia":"false",
+          "idrespuesta": "9",
+          "textorespuesta": "Central, común para todo el edificio"
+        },
+        {
+          "dependencia":"false",
+          "idrespuesta": "10",
+          "textorespuesta": "Individual, solo para mi viviendal"
+        }
+      ]
+    },
+    {
+      "dependiente": "true",
+      "idpregunta": "4",
+      "categoria": "general",
+      "respuestamultiple": "false",
+      "textopregunta": "Marca el número de radiadores:",
+      "respuestas": [
+        {
+          "dependencia":"false",
+          "idrespuesta": "11",
+          "textorespuesta": "1 o 2"
+        },
+        {
+          "dependencia":"false",
+          "idrespuesta": "12",
+          "textorespuesta": "3 a 5"
+        },
+        {
+          "dependencia":"false",
+          "idrespuesta": "13",
+          "textorespuesta": "6 o más"
+        }
+      ]
+    },
+     {
+      "dependiente": "true",
+      "idpregunta": "5",
+      "categoria": "general",
+      "respuestamultiple": "true",
+      "textopregunta": "Si tienes, marca los meses en que tienes encendida la calefacción:",
+      "respuestas": [
+         {
+          "idrespuesta":"14",
+          "textorespuesta":"julio"
+        },
+        {
+          "idrespuesta":"15",
+          "textorespuesta":"agosto"
+        },
+        {
+          "idrespuesta":"16",
+          "textorespuesta":"septiembre"
+        },
+        {
+          "idrespuesta":"17",
+          "textorespuesta":"octubre"
+        },
+        {
+          "idrespuesta":"18",
+          "textorespuesta":"noviembre"
+        },
+        {
+          "idrespuesta":"19",
+          "textorespuesta":"diciembre"
+        },
+        {
+          "idrespuesta":"20",
+          "textorespuesta":"enero"
+        },
+        {
+          "idrespuesta":"21",
+          "textorespuesta":"febrero"
+        },
+        {
+          "idrespuesta":"22",
+          "textorespuesta":"marzo"
+        },
+        {
+          "idrespuesta":"23",
+          "textorespuesta":"abril"
+        },
+        {
+          "idrespuesta":"24",
+          "textorespuesta":"mayo"
+        },
+        {
+          "idrespuesta":"25",
+          "textorespuesta":"junio"
+        }
+      ]
+    }
+]
+         

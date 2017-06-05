@@ -1,0 +1,55 @@
+[
+    {
+      "idpregunta": "1",
+      "categoria": "general",
+      "respuestamultiple": "false",
+      "textopregunta": "¿Que edad tienes?",
+      "respuestas": [
+        {
+          "idrespuesta": "1",
+          "textorespuesta": "Menos de 16 anos"
+        },
+        {
+          "idrespuesta": "2",
+          "textorespuesta": "Entre 17 y 36 anos"
+        },
+        {
+          "idrespuesta": "3",
+          "textorespuesta": "Entre 37 y 56"
+        },
+        {
+          "idrespuesta": "4",
+          "textorespuesta": "Entre 57 y 76"
+        },
+        {
+          "idrespuesta": "5",
+          "textorespuesta": "mas de 76"
+        }
+
+      ]
+    },
+      {
+      "idpregunta": "2",
+      "categoria": "general",
+      "respuestamultiple": "false",
+      "textopregunta": "¿Cuántos elementos de calefacción tienes en casa? (cuenta todos los radiadores, estufas, etc.)?",
+      "respuestas": [
+        {
+          "idrespuesta": "1",
+          "textorespuesta": "No tengo ninguno"
+        },
+        {
+          "idrespuesta": "2",
+          "textorespuesta": "Tengo alguna estufa o calefactor móvil"
+        },
+        {
+          "idrespuesta": "3",
+          "textorespuesta": "Tengo un sistema de calefacción con radiadores fijos",
+          "dependencia":"true"
+        }
+      ]
+    }
+
+]
+
+      
