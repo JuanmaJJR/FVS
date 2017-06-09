@@ -118,6 +118,7 @@ function myFunction(arr) {
             divRespuestas.appendChild(inputRespuesta);
             divRespuestas.appendChild(label);  
         }
+
         if(arr[i].dependiente == null ) {
                 divPregunta.style.display = "flex";
                 divPregunta.setAttribute("id",arr[i].idpregunta);
@@ -127,6 +128,14 @@ function myFunction(arr) {
         }
         divPregunta.appendChild(divRespuestas);    
     }
+    var divBoton = document.createElement("div");
+    divBoton.setAttribute("id","divBoton");
+    var boton = document.createElement("input");
+    boton.setAttribute("type","submit");
+    boton.setAttribute("value","Enviar");
+    boton.setAttribute("id","botonFormulario");
+    divBoton.appendChild(boton);
+    formRespuesta.appendChild(divBoton);
 }
 
 function mostrar(id,preg){
