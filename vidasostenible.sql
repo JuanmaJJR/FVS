@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 09, 2017 at 09:12 AM
+-- Generation Time: Jun 09, 2017 at 10:52 AM
 -- Server version: 10.1.19-MariaDB
 -- PHP Version: 7.0.9
 
@@ -228,26 +228,27 @@ INSERT INTO `depende` (`id`, `idPregunta`, `idRespuesta`, `valorRespuesta`, `idT
 CREATE TABLE `dependencia` (
   `id` int(11) NOT NULL,
   `idDepende` int(11) NOT NULL,
-  `idPregunta` int(11) NOT NULL
+  `idPregunta` int(11) NOT NULL,
+  `idPreguntaDepende` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `dependencia`
 --
 
-INSERT INTO `dependencia` (`id`, `idDepende`, `idPregunta`) VALUES
-(1, 3, 2),
-(2, 3, 3),
-(3, 3, 4),
-(4, 21, 6),
-(5, 21, 7),
-(6, 76, 18),
-(7, 45, 12),
-(8, 45, 13),
-(9, 46, 13),
-(10, 45, 14),
-(11, 45, 15),
-(12, 77, 19);
+INSERT INTO `dependencia` (`id`, `idDepende`, `idPregunta`, `idPreguntaDepende`) VALUES
+(1, 3, 2, 1),
+(2, 3, 3, 1),
+(3, 3, 4, 1),
+(4, 21, 6, 5),
+(5, 21, 7, 5),
+(6, 76, 18, 17),
+(7, 45, 12, 10),
+(8, 45, 13, 10),
+(9, 46, 13, 10),
+(10, 45, 14, 10),
+(11, 45, 15, 10),
+(12, 77, 19, 18);
 
 -- --------------------------------------------------------
 
