@@ -110,8 +110,6 @@ function myFunction(arr) {
             inputRespuesta.setAttribute("name", arr[i].idpregunta);
             inputRespuesta.setAttribute("value", arr[i].respuesta[xd].idrespuesta);
             var label = document.createElement("label");
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 	        label.setAttribute("for",nombre);
 			inputRespuesta.setAttribute("onchange","mostrar("+arr[i].respuesta[xd].idrespuesta + "," + arr[i].idpregunta + ")");
             var labelText = document.createTextNode(arr[i].respuesta[xd].textorespuesta);
@@ -119,16 +117,7 @@ function myFunction(arr) {
             label.innerHTML += "<br>";
             divRespuestas.appendChild(inputRespuesta);
             divRespuestas.appendChild(label);  
-
-
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         }
-            
-
-
-
-
         if(arr[i].dependiente == null ) {
                 divPregunta.style.display = "flex";
                 divPregunta.setAttribute("id",arr[i].idpregunta);
@@ -146,9 +135,7 @@ function mostrar(id,preg){
     for(i = 0 ; i < array.length ; i++) {
          if(array[i].idDepende == id && array[i].idPregunta != preg) {
             document.getElementById(array[i].idPregunta).style.display = "flex";
-       // } else if(array[i].idPregunta == preg) {
-           // document.getElementById(array[i].idPregunta).style.display = "none";
-        } else {
+        } else if(array[i].idDepende > id){
             document.getElementById(array[i].idPregunta).style.display = "none";
         }
     } 
