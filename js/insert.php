@@ -37,3 +37,12 @@ if ($conn->connect_error) {
 
 $conn->close();
 ?>
+
+
+SELECT responde.idPersona, pregunta.pregunta, respuesta.respuesta, depende.valorRespuesta, textoInformativo.texto 
+FROM responde 
+JOIN depende ON responde.idRespuesta=depende.id 
+JOIN pregunta ON pregunta.id=depende.idPregunta 
+JOIN respuesta ON respuesta.id=depende.idRespuesta 
+LEFT JOIN textoInformativo ON depende.idTexto=textoInformativo.id 
+WHERE responde.idPersona=1

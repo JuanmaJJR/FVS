@@ -2,6 +2,9 @@
 var xmlhttp = new XMLHttpRequest();
 var url = "js/php.php";
 var myArr;
+var select1,select2,select3,select4,select5;
+var titulo1,titulo2,titulo3,titulo4,titulo5;
+var formRespuesta;
 
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
@@ -17,61 +20,65 @@ xmlhttp.send();
 function myFunction(arr) {
 
     var contenido = document.getElementById("box-container");
-    var formRespuesta = document.createElement("form");
+    formRespuesta = document.createElement("form");
     formRespuesta.setAttribute("action", "insert.php");
-    formRespuesta.setAttribute("method","POST");
+    formRespuesta.setAttribute("method","post");
     contenido.appendChild(formRespuesta);
 	
-    var select1 = document.createElement("div");
+    select1 = document.createElement("div");
     select1.setAttribute("id","g");
-    var titulo1 = document.createElement("h2");
+    titulo1 = document.createElement("h2");
     titulo1.setAttribute("id","general");
     var nodo1 = document.createTextNode("General");
     titulo1.appendChild(nodo1);
     select1.appendChild(titulo1);
     
 
-    var select2 = document.createElement("div");
+    select2 = document.createElement("div");
     select2.setAttribute("id","e");
-    var titulo2 = document.createElement("h2");
+    titulo2 = document.createElement("h2");
     titulo2.setAttribute("id","energia");
     var nodo2 = document.createTextNode("Energía");
     titulo2.appendChild(nodo2);
     select2.appendChild(titulo2);
 
-    var select3 = document.createElement("div");
+    select3 = document.createElement("div");
     select3.setAttribute("id","t");
-    var titulo3 = document.createElement("h2");
+    titulo3 = document.createElement("h2");
     titulo3.setAttribute("id","transporte");
     var nodo3 = document.createTextNode("Transporte");
     titulo3.appendChild(nodo3);
     select3.appendChild(titulo3);
 
-    var select4 = document.createElement("div");
+    select4 = document.createElement("div");
     select4.setAttribute("id","a");
-    var titulo4 = document.createElement("h2");
+    titulo4 = document.createElement("h2");
     titulo4.setAttribute("id","agua");
     var nodo4 = document.createTextNode("Agua");
     titulo4.appendChild(nodo4);
     select4.appendChild(titulo4);
 
 
-    var select5 = document.createElement("div");
+    select5 = document.createElement("div");
     select5.setAttribute("id","m");
-    var titulo5 = document.createElement("h2");
+    titulo5 = document.createElement("h2");
     titulo5.setAttribute("id","materiales");
     var nodo5 = document.createTextNode("Materiales");
     titulo5.appendChild(nodo5);
     select5.appendChild(titulo5);
 
+
+    titulo1.style.display = "flex";
+    formRespuesta.appendChild(select1);
+    cargarDatos(arr);
+}
+    function cargarDatos(arr) {
     for (i = 0; i < arr.length; i++) {
         var divPregunta = document.createElement("div");
         divPregunta.setAttribute("class", "preguntas");
-        if(arr[i].categoria == "general") {
+        if(arr[i].categoria == "General") {
              select1.appendChild(divPregunta);
-             titulo1.style.display = "flex";
-             formRespuesta.appendChild(select1);
-        } else if(arr[i].categoria == "Energia") {
+        }else if(arr[i].categoria == "Energia") {
             select2.appendChild(divPregunta);
             titulo2.style.display = "flex";
             formRespuesta.appendChild(select2);
