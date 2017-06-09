@@ -19,7 +19,7 @@ function myFunction(arr) {
     var contenido = document.getElementById("box-container");
     var formRespuesta = document.createElement("form");
     formRespuesta.setAttribute("action", "insert.php");
-    formRespuesta.setAttribute("method","post");
+    formRespuesta.setAttribute("method","POST");
     contenido.appendChild(formRespuesta);
 	
     var select1 = document.createElement("div");
