@@ -86,10 +86,12 @@ if ($result3->num_rows > 0) {
 	$dependencia=$row3["id"];
     $idrespuesta=$row3["idDepende"];
 	$textorespuesta=$row3["idPregunta"];
+	$preg = $row3["idPreguntaDepende"];
 
 	$DatosRespuestas["id"]=$dependencia;
 	$DatosRespuestas["idDepende"]=$idrespuesta;
 	$DatosRespuestas["idPregunta"]=$textorespuesta;
+	$DatosRespuestas["idPreguntaDepende"]=$preg;
 	$Respuesta[]=$DatosRespuestas;
 }
 $ArrayPadre["dependencias"]=$Respuesta;

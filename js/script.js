@@ -19,6 +19,7 @@ function myFunction(arr) {
     var contenido = document.getElementById("box-container");
     var formRespuesta = document.createElement("form");
     formRespuesta.setAttribute("action", "insert.php");
+    formRespuesta.setAttribute("method","post");
     contenido.appendChild(formRespuesta);
 	
     var select1 = document.createElement("div");
@@ -144,8 +145,8 @@ function mostrar(id,preg){
     for(i = 0 ; i < array.length ; i++) {
          if(array[i].idDepende == id && array[i].idPregunta != preg) {
             document.getElementById(array[i].idPregunta).style.display = "flex";
-        } else if(array[i].idDepende > id){
+        } else if(array[i].idDepende != id && preg == array[i].idPreguntaDepende){
             document.getElementById(array[i].idPregunta).style.display = "none";
-        }
+        }  
     } 
-}
+}   

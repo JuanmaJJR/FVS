@@ -120,6 +120,17 @@ hr {
     background-color: #b42a33;
     height: 3px;
 }
+#divBoton {
+    display: flex;
+    justify-content: center;
+}
+
+#botonFormulario {
+    height: 40px;
+    width: 80px;
+    margin: 4%;
+    margin-top: 1.5%;
+}
 
 @media screen and (max-width:1430px){
     body {font-size: 23px;}
