@@ -146,7 +146,7 @@ function cargarDatos(arr,arrG) {
                 select4.appendChild(divPregunta);
                 titulo4.style.display = "flex";
                 formRespuesta.appendChild(select4);
-            } else if(arr[i].categoria == "Transporte"){
+            } else if(arr[i].categoria == "Materiales"){
                 select5.appendChild(divPregunta);
                 titulo5.style.display = "flex";
                 formRespuesta.appendChild(select5);
