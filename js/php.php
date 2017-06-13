@@ -4,7 +4,7 @@ $cookie_value = "John Doe";
 setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/");
 $servername = "localhost";
 $user = "root";
-$password = "root";
+$password = "";
 $dbname = "vidasostenible";
 $conn = new mysqli($servername, $user,$password,$dbname);
 $conn->set_charset("utf8");
@@ -67,7 +67,7 @@ if ($result2->num_rows > 0) {
 	}
 }
 
-
+ 
 $DatosPreguntas["respuesta"]=$Respuesta;
 $ArrayPadre["formulario"][]=$DatosPreguntas;
 	}else{
@@ -103,7 +103,9 @@ $ArrayPadre["dependencias"]=$Respuesta;
 }
 $jsonString = json_encode($ArrayPadre, JSON_PRETTY_PRINT);
 
+//echo "<pre>";
 echo $jsonString;
+//echo "</pre>";
 
 
 

@@ -2,10 +2,10 @@
 -- version 4.5.1
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: Jun 09, 2017 at 10:52 AM
--- Server version: 10.1.19-MariaDB
--- PHP Version: 7.0.9
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 13-06-2017 a las 15:23:32
+-- Versión del servidor: 10.1.19-MariaDB
+-- Versión de PHP: 7.0.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -17,15 +17,13 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `vidasostenible`
+-- Base de datos: `vidasostenible`
 --
-DROP DATABASE if EXISTS vidaSostenible;
-CREATE DATABASE vidaSostenible;
-USE vidaSostenible;
+
 -- --------------------------------------------------------
 
 --
--- Table structure for table `categoria`
+-- Estructura de tabla para la tabla `categoria`
 --
 
 CREATE TABLE `categoria` (
@@ -34,7 +32,7 @@ CREATE TABLE `categoria` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `categoria`
+-- Volcado de datos para la tabla `categoria`
 --
 
 INSERT INTO `categoria` (`id`, `nombre`) VALUES
@@ -47,7 +45,7 @@ INSERT INTO `categoria` (`id`, `nombre`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ccaa`
+-- Estructura de tabla para la tabla `ccaa`
 --
 
 CREATE TABLE `ccaa` (
@@ -57,7 +55,7 @@ CREATE TABLE `ccaa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ccaa`
+-- Volcado de datos para la tabla `ccaa`
 --
 
 INSERT INTO `ccaa` (`id`, `nombre`, `idPais`) VALUES
@@ -84,7 +82,7 @@ INSERT INTO `ccaa` (`id`, `nombre`, `idPais`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `conocimientos`
+-- Estructura de tabla para la tabla `conocimientos`
 --
 
 CREATE TABLE `conocimientos` (
@@ -93,7 +91,7 @@ CREATE TABLE `conocimientos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `conocimientos`
+-- Volcado de datos para la tabla `conocimientos`
 --
 
 INSERT INTO `conocimientos` (`id`, `ambito`) VALUES
@@ -106,7 +104,7 @@ INSERT INTO `conocimientos` (`id`, `ambito`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `depende`
+-- Estructura de tabla para la tabla `depende`
 --
 
 CREATE TABLE `depende` (
@@ -118,7 +116,7 @@ CREATE TABLE `depende` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `depende`
+-- Volcado de datos para la tabla `depende`
 --
 
 INSERT INTO `depende` (`id`, `idPregunta`, `idRespuesta`, `valorRespuesta`, `idTexto`) VALUES
@@ -223,7 +221,7 @@ INSERT INTO `depende` (`id`, `idPregunta`, `idRespuesta`, `valorRespuesta`, `idT
 -- --------------------------------------------------------
 
 --
--- Table structure for table `dependencia`
+-- Estructura de tabla para la tabla `dependencia`
 --
 
 CREATE TABLE `dependencia` (
@@ -234,7 +232,7 @@ CREATE TABLE `dependencia` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `dependencia`
+-- Volcado de datos para la tabla `dependencia`
 --
 
 INSERT INTO `dependencia` (`id`, `idDepende`, `idPregunta`, `idPreguntaDepende`) VALUES
@@ -254,7 +252,7 @@ INSERT INTO `dependencia` (`id`, `idDepende`, `idPregunta`, `idPreguntaDepende`)
 -- --------------------------------------------------------
 
 --
--- Table structure for table `edad`
+-- Estructura de tabla para la tabla `edad`
 --
 
 CREATE TABLE `edad` (
@@ -264,7 +262,7 @@ CREATE TABLE `edad` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `edad`
+-- Volcado de datos para la tabla `edad`
 --
 
 INSERT INTO `edad` (`id`, `edad`, `idTexto`) VALUES
@@ -277,7 +275,7 @@ INSERT INTO `edad` (`id`, `edad`, `idTexto`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `espaciocasas`
+-- Estructura de tabla para la tabla `espaciocasas`
 --
 
 CREATE TABLE `espaciocasas` (
@@ -287,7 +285,7 @@ CREATE TABLE `espaciocasas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `espaciocasas`
+-- Volcado de datos para la tabla `espaciocasas`
 --
 
 INSERT INTO `espaciocasas` (`id`, `espacio`, `idTexto`) VALUES
@@ -298,7 +296,7 @@ INSERT INTO `espaciocasas` (`id`, `espacio`, `idTexto`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `estudios`
+-- Estructura de tabla para la tabla `estudios`
 --
 
 CREATE TABLE `estudios` (
@@ -307,7 +305,7 @@ CREATE TABLE `estudios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `estudios`
+-- Volcado de datos para la tabla `estudios`
 --
 
 INSERT INTO `estudios` (`id`, `nivel`) VALUES
@@ -319,7 +317,7 @@ INSERT INTO `estudios` (`id`, `nivel`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `ingresos`
+-- Estructura de tabla para la tabla `ingresos`
 --
 
 CREATE TABLE `ingresos` (
@@ -328,7 +326,7 @@ CREATE TABLE `ingresos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `ingresos`
+-- Volcado de datos para la tabla `ingresos`
 --
 
 INSERT INTO `ingresos` (`id`, `ingresos`) VALUES
@@ -341,7 +339,7 @@ INSERT INTO `ingresos` (`id`, `ingresos`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `numpersonas`
+-- Estructura de tabla para la tabla `numpersonas`
 --
 
 CREATE TABLE `numpersonas` (
@@ -351,7 +349,7 @@ CREATE TABLE `numpersonas` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `numpersonas`
+-- Volcado de datos para la tabla `numpersonas`
 --
 
 INSERT INTO `numpersonas` (`id`, `numero`, `idTexto`) VALUES
@@ -363,7 +361,7 @@ INSERT INTO `numpersonas` (`id`, `numero`, `idTexto`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `paises`
+-- Estructura de tabla para la tabla `paises`
 --
 
 CREATE TABLE `paises` (
@@ -372,7 +370,7 @@ CREATE TABLE `paises` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `paises`
+-- Volcado de datos para la tabla `paises`
 --
 
 INSERT INTO `paises` (`id`, `nombre`) VALUES
@@ -620,13 +618,13 @@ INSERT INTO `paises` (`id`, `nombre`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `persona`
+-- Estructura de tabla para la tabla `persona`
 --
 
 CREATE TABLE `persona` (
   `id` int(11) NOT NULL,
   `pais` int(11) NOT NULL,
-  `ccaa` int(11) NOT NULL,
+  `ccaa` int(11) DEFAULT NULL,
   `edad` int(11) NOT NULL,
   `tipoCasa` int(11) NOT NULL,
   `m2Casa` int(11) NOT NULL,
@@ -638,7 +636,7 @@ CREATE TABLE `persona` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `persona`
+-- Volcado de datos para la tabla `persona`
 --
 
 INSERT INTO `persona` (`id`, `pais`, `ccaa`, `edad`, `tipoCasa`, `m2Casa`, `numPersonas`, `ingresos`, `conocimiento`, `estudios`, `sexo`) VALUES
@@ -648,12 +646,43 @@ INSERT INTO `persona` (`id`, `pais`, `ccaa`, `edad`, `tipoCasa`, `m2Casa`, `numP
 (4, 73, 9, 2, 2, 2, 4, 5, 2, 3, 'femenino'),
 (5, 73, 15, 4, 1, 3, 4, 5, 2, 2, 'femenino'),
 (6, 73, 12, 5, 1, 2, 2, 2, 5, 1, 'femenino'),
-(7, 73, 5, 3, 1, 1, 2, 3, 3, 4, 'femenino');
+(7, 73, 5, 3, 1, 1, 2, 3, 3, 4, 'femenino'),
+(8, 73, 4, 3, 3, 3, 2, 2, 3, 2, 'masculino'),
+(9, 73, 4, 3, 3, 3, 2, 2, 3, 2, 'masculino'),
+(10, 73, 4, 3, 3, 3, 2, 2, 3, 2, 'masculino'),
+(11, 73, 4, 3, 3, 3, 2, 2, 3, 2, 'masculino'),
+(12, 73, 4, 3, 3, 3, 2, 2, 3, 2, 'masculino'),
+(13, 73, 4, 3, 3, 3, 2, 2, 3, 2, 'masculino'),
+(14, 73, 4, 3, 3, 3, 2, 2, 3, 2, 'masculino'),
+(15, 73, 4, 3, 3, 3, 2, 2, 3, 2, 'masculino'),
+(16, 73, 4, 3, 3, 3, 2, 2, 3, 2, 'masculino'),
+(17, 73, 4, 3, 3, 3, 2, 2, 3, 2, 'masculino'),
+(18, 73, 4, 3, 3, 3, 2, 2, 3, 2, 'masculino'),
+(19, 73, 4, 3, 3, 3, 2, 2, 3, 2, 'masculino'),
+(20, 73, 4, 3, 3, 3, 2, 2, 3, 2, 'masculino'),
+(21, 73, 4, 3, 3, 3, 2, 2, 3, 2, 'masculino'),
+(22, 73, 4, 3, 3, 3, 2, 2, 3, 2, 'masculino'),
+(23, 73, 4, 3, 3, 3, 2, 2, 3, 2, 'masculino'),
+(24, 73, 4, 3, 3, 3, 2, 2, 3, 2, 'masculino'),
+(27, 73, 1, 3, 1, 3, 3, 3, 3, 2, 'masculino'),
+(28, 73, 9, 4, 2, 3, 2, 2, 4, 2, 'feminino'),
+(29, 73, 10, 2, 1, 1, 3, 3, 4, 2, 'feminino'),
+(30, 73, 6, 4, 3, 2, 4, 1, 4, 3, 'feminino'),
+(31, 73, 3, 4, 2, 2, 3, 3, 3, 4, 'feminino'),
+(32, 73, 3, 4, 2, 2, 3, 3, 3, 4, 'feminino'),
+(33, 73, 4, 3, 1, 2, 3, 1, 3, 2, 'feminino'),
+(34, 73, 3, 1, 2, 1, 3, 3, 1, 1, 'feminino'),
+(35, 73, 4, 4, 4, 2, 3, 2, 4, 3, 'feminino'),
+(38, 73, 4, 4, 3, 2, 4, 2, 4, 4, 'feminino'),
+(39, 73, 3, 4, 4, 3, 4, 3, 4, 4, 'feminino'),
+(41, 73, 16, 2, 3, 1, 4, 1, 2, 2, 'feminino'),
+(45, 73, 4, 4, 3, 3, 2, 4, 3, 3, 'feminino'),
+(46, 1, NULL, 1, 2, 2, 3, 2, 4, 2, 'feminino');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pertenece`
+-- Estructura de tabla para la tabla `pertenece`
 --
 
 CREATE TABLE `pertenece` (
@@ -663,7 +692,7 @@ CREATE TABLE `pertenece` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `pertenece`
+-- Volcado de datos para la tabla `pertenece`
 --
 
 INSERT INTO `pertenece` (`id`, `idCategoria`, `idPregunta`) VALUES
@@ -690,19 +719,19 @@ INSERT INTO `pertenece` (`id`, `idCategoria`, `idPregunta`) VALUES
 (21, 4, 21),
 (22, 4, 22),
 (23, 4, 23),
-(24,5,24),
-(25,5,25),
-(26,5,26),
-(27,5,27),
-(28,5,28),
-(29,5,29),
-(30,5,30),
-(31,5,31);
+(24, 5, 24),
+(25, 5, 25),
+(26, 5, 26),
+(27, 5, 27),
+(28, 5, 28),
+(29, 5, 29),
+(30, 5, 30),
+(31, 5, 31);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `pregunta`
+-- Estructura de tabla para la tabla `pregunta`
 --
 
 CREATE TABLE `pregunta` (
@@ -714,7 +743,7 @@ CREATE TABLE `pregunta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `pregunta`
+-- Volcado de datos para la tabla `pregunta`
 --
 
 INSERT INTO `pregunta` (`id`, `pregunta`, `tipo`, `disponibilidad`, `orden`) VALUES
@@ -753,7 +782,7 @@ INSERT INTO `pregunta` (`id`, `pregunta`, `tipo`, `disponibilidad`, `orden`) VAL
 -- --------------------------------------------------------
 
 --
--- Table structure for table `responde`
+-- Estructura de tabla para la tabla `responde`
 --
 
 CREATE TABLE `responde` (
@@ -763,7 +792,7 @@ CREATE TABLE `responde` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `responde`
+-- Volcado de datos para la tabla `responde`
 --
 
 INSERT INTO `responde` (`id`, `idPersona`, `idRespuesta`) VALUES
@@ -908,12 +937,194 @@ INSERT INTO `responde` (`id`, `idPersona`, `idRespuesta`) VALUES
 (161, 7, 82),
 (162, 7, 89),
 (163, 7, 92),
-(164, 7, 93);
+(164, 7, 93),
+(165, 15, 94),
+(166, 16, 94),
+(167, 17, 2),
+(168, 17, 22),
+(169, 17, 40),
+(170, 17, 43),
+(171, 17, 46),
+(172, 17, 52),
+(173, 17, 60),
+(174, 17, 69),
+(175, 17, 72),
+(176, 17, 83),
+(177, 17, 87),
+(178, 17, 91),
+(179, 17, 94),
+(180, 18, 1),
+(181, 18, 21),
+(182, 18, 23),
+(183, 18, 35),
+(184, 18, 40),
+(185, 18, 42),
+(186, 18, 45),
+(187, 18, 51),
+(188, 18, 55),
+(189, 18, 61),
+(190, 18, 64),
+(191, 18, 68),
+(192, 18, 72),
+(193, 18, 83),
+(194, 18, 85),
+(195, 18, 90),
+(196, 18, 93),
+(197, 19, 2),
+(198, 19, 22),
+(199, 19, 41),
+(200, 19, 43),
+(201, 19, 45),
+(202, 19, 51),
+(203, 19, 55),
+(204, 19, 61),
+(205, 19, 65),
+(206, 19, 70),
+(207, 19, 73),
+(208, 19, 82),
+(209, 19, 88),
+(210, 19, 90),
+(211, 19, 95),
+(212, 20, 1),
+(213, 20, 22),
+(214, 20, 40),
+(215, 20, 42),
+(216, 20, 50),
+(217, 20, 51),
+(218, 20, 71),
+(219, 20, 72),
+(220, 20, 82),
+(221, 20, 85),
+(222, 20, 92),
+(223, 20, 97),
+(224, 21, 1),
+(225, 21, 22),
+(226, 21, 40),
+(227, 21, 42),
+(228, 21, 50),
+(229, 21, 51),
+(230, 21, 67),
+(231, 21, 72),
+(232, 21, 82),
+(233, 21, 85),
+(234, 21, 92),
+(235, 21, 97),
+(236, 23, 47),
+(237, 23, 51),
+(238, 23, 70),
+(239, 23, 76),
+(240, 23, 86),
+(241, 24, 3),
+(242, 24, 5),
+(243, 24, 8),
+(244, 24, 12),
+(245, 24, 21),
+(246, 24, 29),
+(247, 24, 39),
+(248, 24, 41),
+(249, 24, 43),
+(250, 24, 45),
+(251, 24, 54),
+(252, 24, 59),
+(253, 24, 61),
+(254, 24, 62),
+(255, 24, 67),
+(256, 24, 76),
+(257, 24, 78),
+(258, 24, 83),
+(259, 24, 89),
+(260, 24, 90),
+(261, 24, 93),
+(262, 27, 73),
+(263, 27, 1),
+(264, 27, 3),
+(265, 27, 3),
+(266, 27, 3),
+(267, 27, 1),
+(268, 27, 3),
+(269, 27, 2),
+(270, 27, 3),
+(271, 27, 2),
+(272, 27, 22),
+(273, 27, 41),
+(274, 28, 73),
+(275, 28, 9),
+(276, 28, 2),
+(277, 28, 4),
+(278, 28, 4),
+(279, 28, 2),
+(280, 28, 2),
+(281, 28, 2),
+(282, 28, 3),
+(283, 29, 73),
+(284, 29, 10),
+(285, 29, 3),
+(286, 29, 4),
+(287, 29, 2),
+(288, 29, 1),
+(289, 29, 3),
+(290, 29, 2),
+(291, 29, 1),
+(292, 29, 75),
+(293, 30, 73),
+(294, 30, 6),
+(295, 30, 1),
+(296, 30, 4),
+(297, 30, 4),
+(298, 30, 3),
+(299, 30, 4),
+(300, 30, 3),
+(301, 30, 2),
+(302, 30, 2),
+(303, 30, 22),
+(304, 30, 40),
+(305, 30, 43),
+(306, 30, 45),
+(307, 30, 52),
+(308, 30, 56),
+(309, 30, 61),
+(310, 30, 65),
+(311, 30, 69),
+(312, 30, 73),
+(313, 32, 2),
+(314, 32, 21),
+(315, 32, 25),
+(316, 32, 35),
+(317, 32, 40),
+(318, 32, 43),
+(319, 32, 45),
+(320, 32, 51),
+(321, 32, 57),
+(322, 32, 61),
+(323, 32, 65),
+(324, 32, 70),
+(325, 32, 72),
+(326, 34, 2),
+(327, 34, 21),
+(328, 34, 30),
+(329, 34, 35),
+(330, 34, 41),
+(331, 34, 42),
+(332, 34, 45),
+(333, 34, 53),
+(334, 34, 56),
+(335, 34, 61),
+(336, 34, 65),
+(337, 34, 68),
+(338, 34, 73),
+(339, 41, 2),
+(340, 41, 22),
+(341, 41, 41),
+(342, 41, 42),
+(343, 41, 47),
+(344, 41, 52),
+(345, 41, 69),
+(346, 41, 73);
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `respuesta`
+-- Estructura de tabla para la tabla `respuesta`
 --
 
 CREATE TABLE `respuesta` (
@@ -922,7 +1133,7 @@ CREATE TABLE `respuesta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `respuesta`
+-- Volcado de datos para la tabla `respuesta`
 --
 
 INSERT INTO `respuesta` (`id`, `respuesta`) VALUES
@@ -982,7 +1193,7 @@ INSERT INTO `respuesta` (`id`, `respuesta`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `textoinformativo`
+-- Estructura de tabla para la tabla `textoinformativo`
 --
 
 CREATE TABLE `textoinformativo` (
@@ -991,7 +1202,7 @@ CREATE TABLE `textoinformativo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `textoinformativo`
+-- Volcado de datos para la tabla `textoinformativo`
 --
 
 INSERT INTO `textoinformativo` (`id`, `texto`) VALUES
@@ -1061,7 +1272,7 @@ INSERT INTO `textoinformativo` (`id`, `texto`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tipo`
+-- Estructura de tabla para la tabla `tipo`
 --
 
 CREATE TABLE `tipo` (
@@ -1070,7 +1281,7 @@ CREATE TABLE `tipo` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `tipo`
+-- Volcado de datos para la tabla `tipo`
 --
 
 INSERT INTO `tipo` (`id`, `tipo`) VALUES
@@ -1082,7 +1293,7 @@ INSERT INTO `tipo` (`id`, `tipo`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tipocasa`
+-- Estructura de tabla para la tabla `tipocasa`
 --
 
 CREATE TABLE `tipocasa` (
@@ -1092,7 +1303,7 @@ CREATE TABLE `tipocasa` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `tipocasa`
+-- Volcado de datos para la tabla `tipocasa`
 --
 
 INSERT INTO `tipocasa` (`id`, `tipo`, `idTexto`) VALUES
@@ -1102,30 +1313,30 @@ INSERT INTO `tipocasa` (`id`, `tipo`, `idTexto`) VALUES
 (4, 'Una vivienda en una manzana de casas', NULL);
 
 --
--- Indexes for dumped tables
+-- Índices para tablas volcadas
 --
 
 --
--- Indexes for table `categoria`
+-- Indices de la tabla `categoria`
 --
 ALTER TABLE `categoria`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `ccaa`
+-- Indices de la tabla `ccaa`
 --
 ALTER TABLE `ccaa`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_ccaa_paises` (`idPais`);
 
 --
--- Indexes for table `conocimientos`
+-- Indices de la tabla `conocimientos`
 --
 ALTER TABLE `conocimientos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `depende`
+-- Indices de la tabla `depende`
 --
 ALTER TABLE `depende`
   ADD PRIMARY KEY (`id`),
@@ -1134,7 +1345,7 @@ ALTER TABLE `depende`
   ADD KEY `fk_depende_textoinformativo` (`idTexto`);
 
 --
--- Indexes for table `dependencia`
+-- Indices de la tabla `dependencia`
 --
 ALTER TABLE `dependencia`
   ADD PRIMARY KEY (`id`),
@@ -1142,46 +1353,46 @@ ALTER TABLE `dependencia`
   ADD KEY `fk_dependencia_idPregunta` (`idPregunta`);
 
 --
--- Indexes for table `edad`
+-- Indices de la tabla `edad`
 --
 ALTER TABLE `edad`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_edad_textoinformatico` (`idTexto`);
 
 --
--- Indexes for table `espaciocasas`
+-- Indices de la tabla `espaciocasas`
 --
 ALTER TABLE `espaciocasas`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_espacioCasas_textoinformatico` (`idTexto`);
 
 --
--- Indexes for table `estudios`
+-- Indices de la tabla `estudios`
 --
 ALTER TABLE `estudios`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `ingresos`
+-- Indices de la tabla `ingresos`
 --
 ALTER TABLE `ingresos`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `numpersonas`
+-- Indices de la tabla `numpersonas`
 --
 ALTER TABLE `numpersonas`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_numPersonas_textoinformatico` (`idTexto`);
 
 --
--- Indexes for table `paises`
+-- Indices de la tabla `paises`
 --
 ALTER TABLE `paises`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `persona`
+-- Indices de la tabla `persona`
 --
 ALTER TABLE `persona`
   ADD PRIMARY KEY (`id`),
@@ -1196,7 +1407,7 @@ ALTER TABLE `persona`
   ADD KEY `persona_edad` (`edad`);
 
 --
--- Indexes for table `pertenece`
+-- Indices de la tabla `pertenece`
 --
 ALTER TABLE `pertenece`
   ADD PRIMARY KEY (`id`),
@@ -1204,14 +1415,14 @@ ALTER TABLE `pertenece`
   ADD KEY `pertence_pregunta` (`idPregunta`);
 
 --
--- Indexes for table `pregunta`
+-- Indices de la tabla `pregunta`
 --
 ALTER TABLE `pregunta`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_pregunta_tipo` (`tipo`);
 
 --
--- Indexes for table `responde`
+-- Indices de la tabla `responde`
 --
 ALTER TABLE `responde`
   ADD PRIMARY KEY (`id`),
@@ -1219,142 +1430,142 @@ ALTER TABLE `responde`
   ADD KEY `responde_respuesta` (`idRespuesta`);
 
 --
--- Indexes for table `respuesta`
+-- Indices de la tabla `respuesta`
 --
 ALTER TABLE `respuesta`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `respuesta` (`respuesta`);
 
 --
--- Indexes for table `textoinformativo`
+-- Indices de la tabla `textoinformativo`
 --
 ALTER TABLE `textoinformativo`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tipo`
+-- Indices de la tabla `tipo`
 --
 ALTER TABLE `tipo`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tipocasa`
+-- Indices de la tabla `tipocasa`
 --
 ALTER TABLE `tipocasa`
   ADD PRIMARY KEY (`id`),
   ADD KEY `fk_tipoCasa_textoinformatico` (`idTexto`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT de las tablas volcadas
 --
 
 --
--- AUTO_INCREMENT for table `categoria`
+-- AUTO_INCREMENT de la tabla `categoria`
 --
 ALTER TABLE `categoria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT for table `ccaa`
+-- AUTO_INCREMENT de la tabla `ccaa`
 --
 ALTER TABLE `ccaa`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
--- AUTO_INCREMENT for table `conocimientos`
+-- AUTO_INCREMENT de la tabla `conocimientos`
 --
 ALTER TABLE `conocimientos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT for table `depende`
+-- AUTO_INCREMENT de la tabla `depende`
 --
 ALTER TABLE `depende`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=98;
 --
--- AUTO_INCREMENT for table `dependencia`
+-- AUTO_INCREMENT de la tabla `dependencia`
 --
 ALTER TABLE `dependencia`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
--- AUTO_INCREMENT for table `edad`
+-- AUTO_INCREMENT de la tabla `edad`
 --
 ALTER TABLE `edad`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT for table `espaciocasas`
+-- AUTO_INCREMENT de la tabla `espaciocasas`
 --
 ALTER TABLE `espaciocasas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
--- AUTO_INCREMENT for table `estudios`
+-- AUTO_INCREMENT de la tabla `estudios`
 --
 ALTER TABLE `estudios`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT for table `ingresos`
+-- AUTO_INCREMENT de la tabla `ingresos`
 --
 ALTER TABLE `ingresos`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT for table `numpersonas`
+-- AUTO_INCREMENT de la tabla `numpersonas`
 --
 ALTER TABLE `numpersonas`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT for table `paises`
+-- AUTO_INCREMENT de la tabla `paises`
 --
 ALTER TABLE `paises`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=241;
 --
--- AUTO_INCREMENT for table `persona`
+-- AUTO_INCREMENT de la tabla `persona`
 --
 ALTER TABLE `persona`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 --
--- AUTO_INCREMENT for table `pertenece`
+-- AUTO_INCREMENT de la tabla `pertenece`
 --
 ALTER TABLE `pertenece`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 --
--- AUTO_INCREMENT for table `pregunta`
+-- AUTO_INCREMENT de la tabla `pregunta`
 --
 ALTER TABLE `pregunta`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 --
--- AUTO_INCREMENT for table `responde`
+-- AUTO_INCREMENT de la tabla `responde`
 --
 ALTER TABLE `responde`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=165;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=347;
 --
--- AUTO_INCREMENT for table `respuesta`
+-- AUTO_INCREMENT de la tabla `respuesta`
 --
 ALTER TABLE `respuesta`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=53;
 --
--- AUTO_INCREMENT for table `textoinformativo`
+-- AUTO_INCREMENT de la tabla `textoinformativo`
 --
 ALTER TABLE `textoinformativo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=66;
 --
--- AUTO_INCREMENT for table `tipo`
+-- AUTO_INCREMENT de la tabla `tipo`
 --
 ALTER TABLE `tipo`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT for table `tipocasa`
+-- AUTO_INCREMENT de la tabla `tipocasa`
 --
 ALTER TABLE `tipocasa`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- Constraints for dumped tables
+-- Restricciones para tablas volcadas
 --
 
 --
--- Constraints for table `ccaa`
+-- Filtros para la tabla `ccaa`
 --
 ALTER TABLE `ccaa`
   ADD CONSTRAINT `fk_ccaa_paises` FOREIGN KEY (`idPais`) REFERENCES `paises` (`id`);
 
 --
--- Constraints for table `depende`
+-- Filtros para la tabla `depende`
 --
 ALTER TABLE `depende`
   ADD CONSTRAINT `depende_pregunta` FOREIGN KEY (`idPregunta`) REFERENCES `pregunta` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -1362,32 +1573,32 @@ ALTER TABLE `depende`
   ADD CONSTRAINT `fk_depende_textoinformativo` FOREIGN KEY (`idTexto`) REFERENCES `textoinformativo` (`id`);
 
 --
--- Constraints for table `dependencia`
+-- Filtros para la tabla `dependencia`
 --
 ALTER TABLE `dependencia`
   ADD CONSTRAINT `fk_dependencia_idDepende` FOREIGN KEY (`idDepende`) REFERENCES `depende` (`id`),
   ADD CONSTRAINT `fk_dependencia_idPregunta` FOREIGN KEY (`idPregunta`) REFERENCES `pregunta` (`id`);
 
 --
--- Constraints for table `edad`
+-- Filtros para la tabla `edad`
 --
 ALTER TABLE `edad`
   ADD CONSTRAINT `fk_edad_textoinformatico` FOREIGN KEY (`idTexto`) REFERENCES `textoinformativo` (`id`);
 
 --
--- Constraints for table `espaciocasas`
+-- Filtros para la tabla `espaciocasas`
 --
 ALTER TABLE `espaciocasas`
   ADD CONSTRAINT `fk_espacioCasas_textoinformatico` FOREIGN KEY (`idTexto`) REFERENCES `textoinformativo` (`id`);
 
 --
--- Constraints for table `numpersonas`
+-- Filtros para la tabla `numpersonas`
 --
 ALTER TABLE `numpersonas`
   ADD CONSTRAINT `fk_numPersonas_textoinformatico` FOREIGN KEY (`idTexto`) REFERENCES `textoinformativo` (`id`);
 
 --
--- Constraints for table `persona`
+-- Filtros para la tabla `persona`
 --
 ALTER TABLE `persona`
   ADD CONSTRAINT `persona_ccaa` FOREIGN KEY (`ccaa`) REFERENCES `ccaa` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
@@ -1401,27 +1612,27 @@ ALTER TABLE `persona`
   ADD CONSTRAINT `persona_tipoCasa` FOREIGN KEY (`tipoCasa`) REFERENCES `tipocasa` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `pertenece`
+-- Filtros para la tabla `pertenece`
 --
 ALTER TABLE `pertenece`
   ADD CONSTRAINT `pertence_categoria` FOREIGN KEY (`idCategoria`) REFERENCES `categoria` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `pertence_pregunta` FOREIGN KEY (`idPregunta`) REFERENCES `pregunta` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `pregunta`
+-- Filtros para la tabla `pregunta`
 --
 ALTER TABLE `pregunta`
   ADD CONSTRAINT `fk_pregunta_tipo` FOREIGN KEY (`tipo`) REFERENCES `tipo` (`id`);
 
 --
--- Constraints for table `responde`
+-- Filtros para la tabla `responde`
 --
 ALTER TABLE `responde`
   ADD CONSTRAINT `responde_depende` FOREIGN KEY (`idRespuesta`) REFERENCES `depende` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
   ADD CONSTRAINT `responde_persona` FOREIGN KEY (`idPersona`) REFERENCES `persona` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
--- Constraints for table `tipocasa`
+-- Filtros para la tabla `tipocasa`
 --
 ALTER TABLE `tipocasa`
   ADD CONSTRAINT `fk_tipoCasa_textoinformatico` FOREIGN KEY (`idTexto`) REFERENCES `textoinformativo` (`id`);

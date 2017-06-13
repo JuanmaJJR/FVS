@@ -2,7 +2,8 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "edu";
+$dbname = "vidasostenible";
+session_start(); 
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -12,37 +13,51 @@ if ($conn->connect_error) {
 } 
 
 
+$pais = $_POST['selectpaises'];
+$ccaa= $_POST['selectccaa'];
+$edad= $_POST['selectedad'];
+$tipoCasa= $_POST['selecttipoCasa'];
+$espacioCasa= $_POST['selectespacioCasas'];
+$numPersonas= $_POST['selectnumPersonas'];
+$ingresos = $_POST['selectingresos'];
+$conocimiento = $_POST['selectconocimientos'];
+$estudios = $_POST['selectestudios'];
 
 
 
 
     echo "New record created successfully";
 	
-	
-	$lastId = $conn->insert_id;
+    if($pais==73){
+        $sql = "INSERT INTO `persona` (`id`, `pais`, `ccaa`, `edad`, `tipoCasa`, `m2Casa`, `numPersonas`, `ingresos`, `conocimiento`, `estudios`, `sexo`) VALUES     (NULL, '".$pais."', '".$ccaa."', '".$edad."', '".$tipoCasa."', '".$espacioCasa."', '".$numPersonas."', '".$ingresos."', '".$conocimiento."', '".$estudios."', 'feminino')";
+    }
+	else{
+        $sql = "INSERT INTO `persona` (`id`, `pais`, `ccaa`, `edad`, `tipoCasa`, `m2Casa`, `numPersonas`, `ingresos`, `conocimiento`, `estudios`, `sexo`) VALUES     (NULL, '".$pais."', NULL, '".$edad."', '".$tipoCasa."', '".$espacioCasa."', '".$numPersonas."', '".$ingresos."', '".$conocimiento."', '".$estudios."', 'feminino')";
+    }
+
+    if ($conn->query($sql) === TRUE) {
+    $lastId = $conn->insert_id;
 
 
-	foreach($_POST as $Name => $respuesta){
-	
-					$sql = "INSERT INTO 'responde' ('idPersona', 'idRespuesta',) VALUES ('$lastId, $respuesta)";
-	}
-	if ($conn->query($sql) === TRUE) {
+	       foreach($_POST as $Name => $respuesta){
+	         if (is_numeric($Name)) {
+				$sql = "INSERT INTO `responde` (`idPersona`, `idRespuesta`) VALUES ('".$lastId."', '".$respuesta."')";
+                if ($conn->query($sql) === TRUE) {
 
-	echo "Guay ";
+	       echo "<br>Guay<br/> ";
 	
 	
-} else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
-}
+           } else {
+                echo "<br/>Error: " . $sql . "<br>" . $conn->error."<br/>";
+        }
 
+	       }
+	      
+    }
+    }
+//echo "<a href='final.php?lastId=".$lastId."'>Ver</a>"; 
+header("Location: final.php?lastId=".$lastId);
 $conn->close();
+
 ?>
 
-
-SELECT responde.idPersona, pregunta.pregunta, respuesta.respuesta, depende.valorRespuesta, textoInformativo.texto 
-FROM responde 
-JOIN depende ON responde.idRespuesta=depende.id 
-JOIN pregunta ON pregunta.id=depende.idPregunta 
-JOIN respuesta ON respuesta.id=depende.idRespuesta 
-LEFT JOIN textoInformativo ON depende.idTexto=textoInformativo.id 
-WHERE responde.idPersona=1

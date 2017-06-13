@@ -9,7 +9,8 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {  
+body {
+
   font-size:27px;
   background-color:#e4e4e0;
 
@@ -77,7 +78,10 @@ ul.topnav li a:hover ~ .decor {
     display:flex;
     flex-direction: column;
 }
-
+#box-container{
+    display: flex;
+    flex-direction: column;
+}
 .preguntas,.dependiente{
     border-radius: 7px;
     box-shadow: 0 0 25px #555;
@@ -132,6 +136,49 @@ hr {
     margin-top: 1.5%;
 }
 
+.res{
+   text-align: center;
+    margin: 3% auto;
+    order: -1;
+    border: 2px solid green;
+    border-radius: 20px;
+    box-shadow: 0 0 25px green;
+    background-color: white;
+    padding: 10px;
+    /*position: fixed;
+    top:0;*/
+}
+.res2{
+   text-align: center;
+    margin: 3% auto;
+    order: -1;
+    border: 2px solid yellow;
+    border-radius: 20px;
+    box-shadow: 0 0 25px yellow;
+    background-color: white;
+    padding: 10px;
+    /*position: fixed;
+    top:0;*/
+}
+.res3{
+   text-align: center;
+    margin: 3% auto;
+    order: -1;
+    border: 2px solid #b42a33;
+    border-radius: 20px;
+    box-shadow: 0 0 25px #b42a33;
+    background-color: white;
+    padding: 10px;
+    /*position: fixed;
+    top:0;*/
+}
+img{
+     
+    height:160px;
+    width:160px;
+}
+
+
 @media screen and (max-width:1430px){
     body {font-size: 23px;}
 
@@ -166,6 +213,11 @@ hr {
     label{font-size: 15px;}
 
     .preguntas,.dependiente{width:60%;}
+    /*.res{
+        width: 100%;
+        position: absolute;
+        top:0;
+    }*/
 }
 
 @media screen and (max-width:733px){
@@ -188,6 +240,10 @@ hr {
     hr {margin-bottom: 20px;}
 
     .preguntas,.dependiente{width:80%;}
+    /*.res{
+        width: 100%;
+       
+    }*/
 }
 
 @media screen and (max-width:520px){
