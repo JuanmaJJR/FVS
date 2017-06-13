@@ -1,23 +1,38 @@
 // JavaScript source code
 var xmlhttp = new XMLHttpRequest();
+var xmlhttp2 = new XMLHttpRequest();
 var url = "js/php.php";
+var url2 = "js/jsongeneral.json";
 var myArr;
+var arrayG;
 var select1,select2,select3,select4,select5;
 var titulo1,titulo2,titulo3,titulo4,titulo5;
 var formRespuesta;
+
+xmlhttp2.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+        var documentJson2 = JSON.parse(this.responseText);
+        arrayG = documentJson2;
+        myFunction(myArr["formulario"],arrayG["formulario"]);        
+    }
+}
 
 xmlhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
         var documentJson = JSON.parse(this.responseText);
         myArr = documentJson;
-        myFunction(myArr["formulario"]);
-        
+        xmlhttp2.open("GET", url2, true);
+        xmlhttp2.send();
     }
 }
 xmlhttp.open("GET", url, true);
 xmlhttp.send();
 
-function myFunction(arr) {
+
+
+
+
+function myFunction(arr,arrG) {
 
     var contenido = document.getElementById("box-container");
     formRespuesta = document.createElement("form");
@@ -32,7 +47,6 @@ function myFunction(arr) {
     var nodo1 = document.createTextNode("General");
     titulo1.appendChild(nodo1);
     select1.appendChild(titulo1);
-    
 
     select2 = document.createElement("div");
     select2.setAttribute("id","e");
@@ -67,74 +81,117 @@ function myFunction(arr) {
     titulo5.appendChild(nodo5);
     select5.appendChild(titulo5);
 
-
-    titulo1.style.display = "flex";
-    formRespuesta.appendChild(select1);
-    cargarDatos(arr);
+    cargarDatos(arr,arrG);
 }
-    function cargarDatos(arr) {
+
+function cargarDatos(arr,arrG) {
+    for (i = 0; i < arrG.length; i++) {
+        var divPregunta = document.createElement("div");
+        divPregunta.setAttribute("class", "preguntas");
+        select1.appendChild(divPregunta);
+            titulo1.style.display = "flex";
+            formRespuesta.appendChild(select1);
+            var pPregunta = document.createElement("p");
+            divPregunta.appendChild(pPregunta)
+            var nodoPregunta = document.createTextNode(arrG[i].textopregunta);
+            pPregunta.appendChild(nodoPregunta);
+            var divRespuestas = document.createElement("div");
+            divRespuestas.setAttribute("class", "respuestas");
+            var sep = document.createElement("hr");
+            divPregunta.appendChild(sep);
+            for (var xd = 0; xd < arrG[i].respuesta.length; xd++) {
+                var nombre = i + "-" + xd;
+                if(arrG[i].respuestamultiple == "radio"){
+                    var inputRespuesta = document.createElement("input");
+                    inputRespuesta.setAttribute("type", "radio");
+                    inputRespuesta.setAttribute("id",nombre);
+                } else {
+                    var inputRespuesta = document.createElement("input");
+                    inputRespuesta.setAttribute("type", "checkbox");
+                    inputRespuesta.setAttribute("id",nombre);
+                }
+                inputRespuesta.setAttribute("name", arrG[i].idpregunta);
+                inputRespuesta.setAttribute("value", arrG[i].respuesta[xd].idrespuesta);
+                var label = document.createElement("label");
+                label.setAttribute("for",nombre);
+                inputRespuesta.setAttribute("onchange","mostrarGeneral("+arrG[i].respuesta[xd].idrespuesta + "," + arrG[i].idpregunta + ")");
+                var labelText = document.createTextNode(arrG[i].respuesta[xd].textorespuesta);
+                label.appendChild(labelText);
+                label.innerHTML += "<br>";
+                divRespuestas.appendChild(inputRespuesta);
+                divRespuestas.appendChild(label);  
+            }
+
+            if(arrG[i].dependiente == null ) {
+                    divPregunta.style.display = "flex";
+                    divPregunta.setAttribute("id",arrG[i].idpregunta);
+            } else {
+                divPregunta.setAttribute("class","preguntas dependiente");
+                divPregunta.setAttribute("id",arrG[i].idpregunta);
+            }
+            divPregunta.appendChild(divRespuestas);
+    }
     for (i = 0; i < arr.length; i++) {
         var divPregunta = document.createElement("div");
         divPregunta.setAttribute("class", "preguntas");
-        if(arr[i].categoria == "General") {
-             select1.appendChild(divPregunta);
-        }else if(arr[i].categoria == "Energia") {
-            select2.appendChild(divPregunta);
-            titulo2.style.display = "flex";
-            formRespuesta.appendChild(select2);
-        } else if(arr[i].categoria == "Transporte"){
-            select3.appendChild(divPregunta);
-            titulo3.style.display = "flex";
-            formRespuesta.appendChild(select3);
-        } else if(arr[i].categoria == "Agua"){
-            select4.appendChild(divPregunta);
-            titulo4.style.display = "flex";
-            formRespuesta.appendChild(select4);
-        } else {
-            select5.appendChild(divPregunta);
-            titulo5.style.display = "flex";
-            formRespuesta.appendChild(select5);
-        }
-
-        var pPregunta = document.createElement("p");
-        divPregunta.appendChild(pPregunta)
-        var nodoPregunta = document.createTextNode(arr[i].textopregunta);
-        pPregunta.appendChild(nodoPregunta);
-        var divRespuestas = document.createElement("div");
-        divRespuestas.setAttribute("class", "respuestas");
-        var sep = document.createElement("hr");
-        divPregunta.appendChild(sep);
-        for (var xd = 0; xd < arr[i].respuesta.length; xd++) {
-            var nombre = i + "-" + xd;
-            if(arr[i].respuestamultiple == "radio"){
-                var inputRespuesta = document.createElement("input");
-                inputRespuesta.setAttribute("type", "radio");
-                inputRespuesta.setAttribute("id",nombre);
+            if(arr[i].categoria == "Energia") {
+                select2.appendChild(divPregunta);
+                titulo2.style.display = "flex";
+                formRespuesta.appendChild(select2);
+            } else if(arr[i].categoria == "Transporte"){
+                select3.appendChild(divPregunta);
+                titulo3.style.display = "flex";
+                formRespuesta.appendChild(select3);
+            } else if(arr[i].categoria == "Agua"){
+                select4.appendChild(divPregunta);
+                titulo4.style.display = "flex";
+                formRespuesta.appendChild(select4);
             } else {
-                var inputRespuesta = document.createElement("input");
-                inputRespuesta.setAttribute("type", "checkbox");
-                inputRespuesta.setAttribute("id",nombre);
+                select5.appendChild(divPregunta);
+                titulo5.style.display = "flex";
+                formRespuesta.appendChild(select5);
             }
-            inputRespuesta.setAttribute("name", arr[i].idpregunta);
-            inputRespuesta.setAttribute("value", arr[i].respuesta[xd].idrespuesta);
-            var label = document.createElement("label");
-	        label.setAttribute("for",nombre);
-			inputRespuesta.setAttribute("onchange","mostrar("+arr[i].respuesta[xd].idrespuesta + "," + arr[i].idpregunta + ")");
-            var labelText = document.createTextNode(arr[i].respuesta[xd].textorespuesta);
-            label.appendChild(labelText);
-            label.innerHTML += "<br>";
-            divRespuestas.appendChild(inputRespuesta);
-            divRespuestas.appendChild(label);  
-        }
+            var pPregunta = document.createElement("p");
+            divPregunta.appendChild(pPregunta)
+            var nodoPregunta = document.createTextNode(arr[i].textopregunta);
+            pPregunta.appendChild(nodoPregunta);
+            var divRespuestas = document.createElement("div");
+            divRespuestas.setAttribute("class", "respuestas");
+            var sep = document.createElement("hr");
+            divPregunta.appendChild(sep);
+            var count = 10000;
+            for (var xd = 0; xd < arr[i].respuesta.length; xd++) {
+                var nombre = i + "-" + count;
+                if(arr[i].respuestamultiple == "radio"){
+                    var inputRespuesta = document.createElement("input");
+                    inputRespuesta.setAttribute("type", "radio");
+                    inputRespuesta.setAttribute("id",nombre);
+                } else {
+                    var inputRespuesta = document.createElement("input");
+                    inputRespuesta.setAttribute("type", "checkbox");
+                    inputRespuesta.setAttribute("id",nombre);
+                }
+                inputRespuesta.setAttribute("name", arr[i].idpregunta);
+                inputRespuesta.setAttribute("value", arr[i].respuesta[xd].idrespuesta);
+                var label = document.createElement("label");
+                label.setAttribute("for",nombre);
+                inputRespuesta.setAttribute("onchange","mostrar("+arr[i].respuesta[xd].idrespuesta + "," + arr[i].idpregunta + ")");
+                var labelText = document.createTextNode(arr[i].respuesta[xd].textorespuesta);
+                label.appendChild(labelText);
+                label.innerHTML += "<br>";
+                divRespuestas.appendChild(inputRespuesta);
+                divRespuestas.appendChild(label);  
+                count++;
+            }
 
-        if(arr[i].dependiente == null ) {
-                divPregunta.style.display = "flex";
+            if(arr[i].dependiente == null ) {
+                    divPregunta.style.display = "flex";
+                    divPregunta.setAttribute("id",arr[i].idpregunta);
+            } else {
+                divPregunta.setAttribute("class","preguntas dependiente");
                 divPregunta.setAttribute("id",arr[i].idpregunta);
-        } else {
-             divPregunta.setAttribute("class","preguntas dependiente");
-             divPregunta.setAttribute("id",arr[i].idpregunta);
-        }
-        divPregunta.appendChild(divRespuestas);    
+            }
+            divPregunta.appendChild(divRespuestas);    
     }
     var divBoton = document.createElement("div");
     divBoton.setAttribute("id","divBoton");
@@ -145,6 +202,7 @@ function myFunction(arr) {
     divBoton.appendChild(boton);
     formRespuesta.appendChild(divBoton);
 }
+
 
 function mostrar(id,preg){
     var array = myArr["dependencias"];
@@ -157,3 +215,15 @@ function mostrar(id,preg){
         }  
     } 
 }   
+
+function mostrarGeneral(id,preg){
+    var array = arrayG["dependencias"];
+    
+    for(i = 0 ; i < array.length ; i++) {
+         if(array[i].idDepende == id && array[i].idPregunta != preg) {
+            document.getElementById(array[i].idPregunta).style.display = "flex";
+        } else if(array[i].idDepende != id && preg == array[i].idPreguntaDepende){
+            document.getElementById(array[i].idPregunta).style.display = "none";
+        }  
+    } 
+}

@@ -13,69 +13,69 @@
                 },
                 {
                     "idrespuesta": "2",
-                    "idrespuesta": "Islas Gland"
+                    "textorespuesta": "Islas Gland"
                 },
                 {
                     "idrespuesta": "3",
-                    "idrespuesta": "Albani"
+                    "textorespuesta": "Albani"
                 },
                 {
                     "idrespuesta": "4",
-                    "idrespuesta": "Alemania"
+                    "textorespuesta": "Alemania"
                 },
                 {
                     "idrespuesta": "13",
-                    "idrespuesta": "Argentina"
+                    "textorespuesta": "Argentina"
                 },
                 {
                     "idrespuesta": "16",
-                    "idrespuesta": "Australia"
+                    "textorespuesta": "Australia"
                 },
                 {
                     "idrespuesta": "24",
-                    "idrespuesta": "Belgica"
+                    "textorespuesta": "Belgica"
                 },
                 {
                     "idrespuesta": "42",
-                    "idrespuesta": "Canada"
+                    "textorespuesta": "Canada"
                 },
                 {
                     "idrespuesta": "45",
-                    "idrespuesta": "Republica Checa"
+                    "textorespuesta": "Republica Checa"
                 },
                 {
                     "idrespuesta": "47",
-                    "idrespuesta": "China"
+                    "textorespuesta": "China"
                 },
                 {
                     "idrespuesta": "52",
-                    "idrespuesta": "Colombia"
+                    "textorespuesta": "Colombia"
                 },
                 {
                     "idrespuesta": "57",
-                    "idrespuesta": "Corea del Norte"
+                    "textorespuesta": "Corea del Norte"
                 },
                 {
                     "idrespuesta": "63",
-                    "idrespuesta": "Dinamarca"
+                    "textorespuesta": "Dinamarca"
                 },
                 {
                     "idrespuesta": "66",
-                    "idrespuesta": "Ecuador"
+                    "textorespuesta": "Ecuador"
                 },
                 {
                     "idrespuesta": "73",
-                    "idrespuesta": "España"
+                    "textorespuesta": "España"
                 },
                 {
                     "idrespuesta": "75",
-                    "idrespuesta": "Estados Unidos"
-                },
+                    "textorespuesta": "Estados Unidos"
+                }
             
             ]
         },
         {
-            "dependiente": null,
+            "dependiente": 1,
             "idpregunta": "25",
             "categoria": "General",
             "respuestamultiple": "radio",
@@ -83,80 +83,80 @@
             "respuesta": [
                  {
                     "idrespuesta": "1",
-                    "idrespuesta": "Andalucia"
+                    "textorespuesta": "Andalucia"
                 },
                  {
                     "idrespuesta": "2",
-                    "idrespuesta": "Aragon"
+                    "textorespuesta": "Aragon"
                 },
                  {
                     "idrespuesta": "3",
-                    "idrespuesta": "Principado de Asturias"
+                    "textorespuesta": "Principado de Asturias"
                 },
                  {
                     "idrespuesta": "4",
-                    "idrespuesta": "Illes Balears"
+                    "textorespuesta": "Illes Balears"
                 },
                  {
                     "idrespuesta": "5",
-                    "idrespuesta": "Canarias"
+                    "textorespuesta": "Canarias"
                 },
                  {
                     "idrespuesta": "6",
-                    "idrespuesta": "Cantabria"
+                    "textorespuesta": "Cantabria"
                 },
                  {
                     "idrespuesta": "7",
-                    "idrespuesta": "Castilla y León"
+                    "textorespuesta": "Castilla y León"
                 },
                  {
                     "idrespuesta": "8",
-                    "idrespuesta": "Castilla - La Mancha"
+                    "textorespuesta": "Castilla - La Mancha"
                 },
                  {
                     "idrespuesta": "9",
-                    "idrespuesta": "Cataluña"
+                    "textorespuesta": "Cataluña"
                 },
                  {
                     "idrespuesta": "10",
-                    "idrespuesta": "Comunitat Valenciana"
+                    "textorespuesta": "Comunitat Valenciana"
                 },
                 {
                     "idrespuesta": "11",
-                    "idrespuesta": "Extremadura"
+                    "textorespuesta": "Extremadura"
                 },
                  {
                     "idrespuesta": "12",
-                    "idrespuesta": "Galicia"
+                    "textorespuesta": "Galicia"
                 },
                  {
                     "idrespuesta": "13",
-                    "idrespuesta": "Comunidad de Madrid"
+                    "textorespuesta": "Comunidad de Madrid"
                 },
                  {
                     "idrespuesta": "14",
-                    "idrespuesta": "Region de Murcia"
+                    "textorespuesta": "Region de Murcia"
                 },
                  {
                     "idrespuesta": "15",
-                    "idrespuesta": "Comunidad Foral de Navarra"
+                    "textorespuesta": "Comunidad Foral de Navarra"
                 },
                  {
                     "idrespuesta": "16",
-                    "idrespuesta": "País Vasco"
+                    "textorespuesta": "País Vasco"
                 },
                  {
                     "idrespuesta": "17",
-                    "idrespuesta": "La Rioja"
+                    "textorespuesta": "La Rioja"
                 },
                  {
                     "idrespuesta": "18",
-                    "idrespuesta": "Ceuta"
+                    "textorespuesta": "Ceuta"
                 },
                  {
                     "idrespuesta": "19",
-                    "idrespuesta": "Melilla"
-                },
+                    "textorespuesta": "Melilla"
+                }
             ]
         },
         {
@@ -168,24 +168,24 @@
             "respuesta": [
                 {
                     "idrespuesta": "1",
-                    "idrespuesta": "Hasta 5.000 € / $us."
+                    "textorespuesta": "Hasta 5.000 € / $us."
                 },
                 {
                     "idrespuesta": "2",
-                    "idrespuesta": "Entre 5.000 y 10.000 € / $us."
+                    "textorespuesta": "Entre 5.000 y 10.000 € / $us."
                 },
                 {
                     "idrespuesta": "3",
-                    "idrespuesta": "Entre 10.000 y 20.000 € / $us."
+                    "textorespuesta": "Entre 10.000 y 20.000 € / $us."
                 },
                 {
                     "idrespuesta": "4",
-                    "idrespuesta": "Entre 20.000 y 40.000 € / $us."
+                    "textorespuesta": "Entre 20.000 y 40.000 € / $us."
                 },
                 {
                     "idrespuesta": "5",
-                    "idrespuesta": "Más 40.000 € / $us."
-                },
+                    "textorespuesta": "Más 40.000 € / $us."
+                }
             
             ]
         },
@@ -198,24 +198,24 @@
             "respuesta": [
             {
                     "idrespuesta": "1",
-                    "idrespuesta": "Artes y humanidades"
+                    "textorespuesta": "Artes y humanidades"
                 },
                 {
                     "idrespuesta": "2",
-                    "idrespuesta": "Ciencia e Ingenierías"
+                    "textorespuesta": "Ciencia e Ingenierías"
                 },
                 {
                     "idrespuesta": "3",
-                    "idrespuesta": "Ciencias de la salud"
+                    "textorespuesta": "Ciencias de la salud"
                 },
                 {
                     "idrespuesta": "4",
-                    "idrespuesta": "Ciencias sociales y jurídicas"
+                    "textorespuesta": "Ciencias sociales y jurídicas"
                 },
                 {
                     "idrespuesta": "5",
-                    "idrespuesta": "Otros"
-                },
+                    "textorespuesta": "Otros"
+                }
             ]
         },
         {
@@ -227,24 +227,24 @@
             "respuesta": [
                {
                     "idrespuesta": "1",
-                    "idrespuesta": "Menos de 16 años"
+                    "textorespuesta": "Menos de 16 años"
                 },
                 {
                     "idrespuesta": "2",
-                    "idrespuesta": "Entre 17 y 36"
+                    "textorespuesta": "Entre 17 y 36"
                 },
                 {
                     "idrespuesta": "3",
-                    "idrespuesta": "Entre 37 y 56"
+                    "textorespuesta": "Entre 37 y 56"
                 },
                 {
                     "idrespuesta": "4",
-                    "idrespuesta": "de 57 a 76"
+                    "textorespuesta": "de 57 a 76"
                 },
                 {
                     "idrespuesta": "5",
-                    "idrespuesta": "Más de 76"
-                },
+                    "textorespuesta": "Más de 76"
+                }
             ]
         },
         {
@@ -256,20 +256,20 @@
             "respuesta": [
                 {
                     "idrespuesta": "1",
-                    "idrespuesta": "Un chalet o vivienda aislada"
+                    "textorespuesta": "Un chalet o vivienda aislada"
                 },
                 {
                     "idrespuesta": "2",
-                    "idrespuesta": "Un adosado"
+                    "textorespuesta": "Un adosado"
                 },
                 {
                     "idrespuesta": "3",
-                    "idrespuesta": "Una vivienda en un bloque de pisos"
+                    "textorespuesta": "Una vivienda en un bloque de pisos"
                 },
                 {
                     "idrespuesta": "4",
-                    "idrespuesta": "Una vivienda de una manzana de casas"
-                },
+                    "textorespuesta": "Una vivienda de una manzana de casas"
+                }
             ]
         },
         {
@@ -281,20 +281,20 @@
             "respuesta": [
                 {
                     "idrespuesta": "1",
-                    "idrespuesta": "Uno"
+                    "textorespuesta": "Uno"
                 },
                 {
                     "idrespuesta": "2",
-                    "idrespuesta": "Dos"
+                    "textorespuesta": "Dos"
                 },
                 {
                     "idrespuesta": "3",
-                    "idrespuesta": "Tres"
+                    "textorespuesta": "Tres"
                 },
                 {
                     "idrespuesta": "4",
-                    "idrespuesta": "Cuatro"
-                },
+                    "textorespuesta": "Cuatro"
+                }
             ]
         },
         {
@@ -306,26 +306,24 @@
             "respuesta": [
                 {
                     "idrespuesta": "1",
-                    "idrespuesta": "Menos de 60 m2",
+                    "textorespuesta": "Menos de 60 m2"
                 },
                 {
                     "idrespuesta": "2",
-                    "idrespuesta": "Entre 61 y 120 m2",
+                    "textorespuesta": "Entre 61 y 120 m2"
                 },
                 {
                     "idrespuesta": "3",
-                    "idrespuesta": "Mas de 121 m2"
-                },
+                    "textorespuesta": "Mas de 121 m2"
+                }
             ]
-            
-            
         }
-],
+    ],
     "dependencias": 
             [
                 {
                         "id": "13",
-                        "idDepende": "74",
+                        "idDepende": "73",
                         "idPregunta": "25",
                         "idPreguntaDepende": "24"
                 }
