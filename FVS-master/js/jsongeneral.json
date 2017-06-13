@@ -1,0 +1,334 @@
+{
+    "formulario":[
+        {
+            "dependiente": null,
+            "idpregunta": "24",
+            "categoria": "General",
+            "respuestamultiple": "radio",
+            "textopregunta": "\u00bfEn qu\u00e9 pa\u00eds vives?",
+            "respuesta": [
+                {
+                    "idrespuesta": "1",
+                    "textorespuesta": "Afganistán"
+                },
+                {
+                    "idrespuesta": "2",
+                    "idrespuesta": "Islas Gland"
+                },
+                {
+                    "idrespuesta": "3",
+                    "idrespuesta": "Albani"
+                },
+                {
+                    "idrespuesta": "4",
+                    "idrespuesta": "Alemania"
+                },
+                {
+                    "idrespuesta": "13",
+                    "idrespuesta": "Argentina"
+                },
+                {
+                    "idrespuesta": "16",
+                    "idrespuesta": "Australia"
+                },
+                {
+                    "idrespuesta": "24",
+                    "idrespuesta": "Belgica"
+                },
+                {
+                    "idrespuesta": "42",
+                    "idrespuesta": "Canada"
+                },
+                {
+                    "idrespuesta": "45",
+                    "idrespuesta": "Republica Checa"
+                },
+                {
+                    "idrespuesta": "47",
+                    "idrespuesta": "China"
+                },
+                {
+                    "idrespuesta": "52",
+                    "idrespuesta": "Colombia"
+                },
+                {
+                    "idrespuesta": "57",
+                    "idrespuesta": "Corea del Norte"
+                },
+                {
+                    "idrespuesta": "63",
+                    "idrespuesta": "Dinamarca"
+                },
+                {
+                    "idrespuesta": "66",
+                    "idrespuesta": "Ecuador"
+                },
+                {
+                    "idrespuesta": "73",
+                    "idrespuesta": "España"
+                },
+                {
+                    "idrespuesta": "75",
+                    "idrespuesta": "Estados Unidos"
+                },
+            
+            ]
+        },
+        {
+            "dependiente": null,
+            "idpregunta": "25",
+            "categoria": "General",
+            "respuestamultiple": "radio",
+            "textopregunta": "\u00bfEn qu\u00e9 Comunidad Aut\u00f3noma?",
+            "respuesta": [
+                 {
+                    "idrespuesta": "1",
+                    "idrespuesta": "Andalucia"
+                },
+                 {
+                    "idrespuesta": "2",
+                    "idrespuesta": "Aragon"
+                },
+                 {
+                    "idrespuesta": "3",
+                    "idrespuesta": "Principado de Asturias"
+                },
+                 {
+                    "idrespuesta": "4",
+                    "idrespuesta": "Illes Balears"
+                },
+                 {
+                    "idrespuesta": "5",
+                    "idrespuesta": "Canarias"
+                },
+                 {
+                    "idrespuesta": "6",
+                    "idrespuesta": "Cantabria"
+                },
+                 {
+                    "idrespuesta": "7",
+                    "idrespuesta": "Castilla y León"
+                },
+                 {
+                    "idrespuesta": "8",
+                    "idrespuesta": "Castilla - La Mancha"
+                },
+                 {
+                    "idrespuesta": "9",
+                    "idrespuesta": "Cataluña"
+                },
+                 {
+                    "idrespuesta": "10",
+                    "idrespuesta": "Comunitat Valenciana"
+                },
+                {
+                    "idrespuesta": "11",
+                    "idrespuesta": "Extremadura"
+                },
+                 {
+                    "idrespuesta": "12",
+                    "idrespuesta": "Galicia"
+                },
+                 {
+                    "idrespuesta": "13",
+                    "idrespuesta": "Comunidad de Madrid"
+                },
+                 {
+                    "idrespuesta": "14",
+                    "idrespuesta": "Region de Murcia"
+                },
+                 {
+                    "idrespuesta": "15",
+                    "idrespuesta": "Comunidad Foral de Navarra"
+                },
+                 {
+                    "idrespuesta": "16",
+                    "idrespuesta": "País Vasco"
+                },
+                 {
+                    "idrespuesta": "17",
+                    "idrespuesta": "La Rioja"
+                },
+                 {
+                    "idrespuesta": "18",
+                    "idrespuesta": "Ceuta"
+                },
+                 {
+                    "idrespuesta": "19",
+                    "idrespuesta": "Melilla"
+                },
+            ]
+        },
+        {
+            "dependiente": null,
+            "idpregunta": "26",
+            "categoria": "General",
+            "respuestamultiple": "radio",
+            "textopregunta": "\u00bfEn cual de los siguientes rangos, podr\u00eda usted localizar su nivel de ingresos familiares anuales?",
+            "respuesta": [
+                {
+                    "idrespuesta": "1",
+                    "idrespuesta": "Hasta 5.000 € / $us."
+                },
+                {
+                    "idrespuesta": "2",
+                    "idrespuesta": "Entre 5.000 y 10.000 € / $us."
+                },
+                {
+                    "idrespuesta": "3",
+                    "idrespuesta": "Entre 10.000 y 20.000 € / $us."
+                },
+                {
+                    "idrespuesta": "4",
+                    "idrespuesta": "Entre 20.000 y 40.000 € / $us."
+                },
+                {
+                    "idrespuesta": "5",
+                    "idrespuesta": "Más 40.000 € / $us."
+                },
+            
+            ]
+        },
+        {
+            "dependiente": null,
+            "idpregunta": "27",
+            "categoria": "General",
+            "respuestamultiple": "radio",
+            "textopregunta": "\u00bfD\u00f3nde localizar\u00eda su profesi\u00f3n, formaci\u00f3n o \u00e1rea de conocimiento, de las siguientes opciones?",
+            "respuesta": [
+            {
+                    "idrespuesta": "1",
+                    "idrespuesta": "Artes y humanidades"
+                },
+                {
+                    "idrespuesta": "2",
+                    "idrespuesta": "Ciencia e Ingenierías"
+                },
+                {
+                    "idrespuesta": "3",
+                    "idrespuesta": "Ciencias de la salud"
+                },
+                {
+                    "idrespuesta": "4",
+                    "idrespuesta": "Ciencias sociales y jurídicas"
+                },
+                {
+                    "idrespuesta": "5",
+                    "idrespuesta": "Otros"
+                },
+            ]
+        },
+        {
+            "dependiente": null,
+            "idpregunta": "28",
+            "categoria": "General",
+            "respuestamultiple": "radio",
+            "textopregunta": "\u00bfQu\u00e9 edad tienes?",
+            "respuesta": [
+               {
+                    "idrespuesta": "1",
+                    "idrespuesta": "Menos de 16 años"
+                },
+                {
+                    "idrespuesta": "2",
+                    "idrespuesta": "Entre 17 y 36"
+                },
+                {
+                    "idrespuesta": "3",
+                    "idrespuesta": "Entre 37 y 56"
+                },
+                {
+                    "idrespuesta": "4",
+                    "idrespuesta": "de 57 a 76"
+                },
+                {
+                    "idrespuesta": "5",
+                    "idrespuesta": "Más de 76"
+                },
+            ]
+        },
+        {
+            "dependiente": null,
+            "idpregunta": "29",
+            "categoria": "General",
+            "respuestamultiple": "radio",
+            "textopregunta": "\u00bfC\u00f3mo es la casa en la que vives? (Si tienes varias casas, tu domicilio personal)",
+            "respuesta": [
+                {
+                    "idrespuesta": "1",
+                    "idrespuesta": "Un chalet o vivienda aislada"
+                },
+                {
+                    "idrespuesta": "2",
+                    "idrespuesta": "Un adosado"
+                },
+                {
+                    "idrespuesta": "3",
+                    "idrespuesta": "Una vivienda en un bloque de pisos"
+                },
+                {
+                    "idrespuesta": "4",
+                    "idrespuesta": "Una vivienda de una manzana de casas"
+                },
+            ]
+        },
+        {
+            "dependiente": null,
+            "idpregunta": "30",
+            "categoria": "General",
+            "respuestamultiple": "radio",
+            "textopregunta": "\u00bfCu\u00e1ntas personas viven en tu hogar?",
+            "respuesta": [
+                {
+                    "idrespuesta": "1",
+                    "idrespuesta": "Uno"
+                },
+                {
+                    "idrespuesta": "2",
+                    "idrespuesta": "Dos"
+                },
+                {
+                    "idrespuesta": "3",
+                    "idrespuesta": "Tres"
+                },
+                {
+                    "idrespuesta": "4",
+                    "idrespuesta": "Cuatro"
+                },
+            ]
+        },
+        {
+            "dependiente": null,
+            "idpregunta": "31",
+            "categoria": "General",
+            "respuestamultiple": "radio",
+            "textopregunta": "Indica el espacio del que dispones en metros cuadrados)",
+            "respuesta": [
+                {
+                    "idrespuesta": "1",
+                    "idrespuesta": "Menos de 60 m2",
+                },
+                {
+                    "idrespuesta": "2",
+                    "idrespuesta": "Entre 61 y 120 m2",
+                },
+                {
+                    "idrespuesta": "3",
+                    "idrespuesta": "Mas de 121 m2"
+                },
+            ]
+            
+            
+        }
+],
+    "dependencias": 
+            [
+                {
+                        "id": "13",
+                        "idDepende": "74",
+                        "idPregunta": "25",
+                        "idPreguntaDepende": "24"
+                }
+                ]
+}
+
